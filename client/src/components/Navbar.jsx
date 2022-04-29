@@ -19,18 +19,22 @@ const Navbar = () => {
     return (
         <div className='w-full flex md:justify-center justify-between items-center p-4'>
             <div className='md:flex-[0.5] flex-initial'>
-                <img src={logo} alt='PhlKrypt' className='w-32 cursor-pointer' />
+                <span className='w-32 cursor-pointer text-white'>Sokoya Philip</span>
             </div>
-            <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initals'>
+            <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-inital'>
                 {['Market', 'Exchange', 'Tutorials', 'Wallets'].map( ( item, index) => (
                     <NavbarItem key={item + index} title={item} />
                 ))}
-                <li className='bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg[#2546bd]'>
+                <li className='bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]'>
                     Login
                 </li>
             </ul>
+            {/* Mobile View */}
             <div className='flex relative'>
-                {toggleMenu ? <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(false)} /> : <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} /> }
+                {toggleMenu ? 
+                <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' 
+                onClick={() => setToggleMenu(false)} /> : 
+                <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} /> }
                 {toggleMenu && (
                     <ul 
                      className='z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'
