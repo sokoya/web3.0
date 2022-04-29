@@ -11,3 +11,7 @@ Built on ReactJS, Vite.
 Ethereum Blockchain, Solidity
 Frontend UI Library used: TailwindCSS
 
+# To Use
+Install MetaMask on your browser. Connect the metamask, using Test Network - Ropsten
+
+Test run.
